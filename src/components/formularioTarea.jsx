@@ -1,4 +1,5 @@
 import { Button, Form } from "react-bootstrap";
+import ListaTareas from "./ListaTareas";
 //import Form from "react-bootstrap/Form";
 //import Form from "react-boostrap/Button";
 const FormularioTarea = () => { 
@@ -9,8 +10,9 @@ const FormularioTarea = () => {
           <Form.Control type="text" placeholder="Ej: tarea 1" className="me-2" />
           <Button variant="dark" type="submit">Agregar</Button>
         </Form.Group>
-        
+      
       </Form>
+      <ListaTareas></ListaTareas>
     </section>
   );
 };
