@@ -6,12 +6,24 @@ import { useState } from "react";
 const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
   //declaro una constante dentro del corchete el nombre del state y el nombre de la funcion del state siemrpe con la palabra set antes.Luego colocamos el operador de asignacion "=", invocamos el useState y entre parentesis con valor inicializo tarea.
+  
   const [arrayTareas, setArrayTareas] = useState([]);
   // luego me creo otra constante, un arrays, invoco a useState y lo inicializo como un array vacio([]).
   //antes del return debo agregar toda la logica que necesite, los estados, variables, funciones.
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    //guardar el state tarea en el arrayTareas
+    // spread ...
+    setArrayTareas([...arrayTareas, tarea])
+    //operador express de js
+    //limpiar el formulario
+    setTarea('');
+  };
+
   return (
     <section>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3 d-flex" controlId="formularioTarea">
           <Form.Control
             type="text"
