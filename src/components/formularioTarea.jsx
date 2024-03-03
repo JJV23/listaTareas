@@ -33,13 +33,15 @@ const FormularioTarea = () => {
             //evento onChange, asociados a la funcion
             value={tarea}
             //al value le asigno el estado del componente, en este caso el state tarea, se enlaza siempre que el input dependa del estado, serian componentes controlados.
+            
           />
           <Button variant="dark" type="submit">
             Agregar
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas></ListaTareas>
+      <ListaTareas arrayTareas = {arrayTareas}></ListaTareas>
+      
     </section>
   );
 };
